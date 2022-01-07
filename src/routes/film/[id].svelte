@@ -1,10 +1,10 @@
 <script context="module">
     import { getMovieById } from "../../moviestore";
-    import MovieCard from "../../components/movieCard.svelte";
+    import MovieCard from "../../components/MovieCard.svelte";
     
-    export async function load(ctx) {
-        let id = ctx.page.params.id;
-        const movie = await getMovieById(id);
+    export async function load({params}) {
+        console.log(params)
+        const movie = await getMovieById(params.id);
         console.log({ movie });
         return { props: { movie }}
     }
