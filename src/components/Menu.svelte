@@ -11,8 +11,8 @@
             <a class="btn btn-ghost btn-sm rounded-btn normal-case" href="/premiery">
               Premiery
             </a> 
-            <a class="btn btn-ghost btn-sm rounded-btn normal-case" href="/gatunki">
-              Gatunki
+            <a class="btn btn-ghost btn-sm rounded-btn normal-case" href="/quiz">
+              Quiz
             </a>
             <a class="btn btn-ghost btn-sm rounded-btn normal-case" href="/szukaj">
             Wyszukiwarka

@@ -1,21 +1,8 @@
 <script>
-	import { movies, fetchMovies } from '../moviestore';
+	import { loaded, topMovies, fetchTopMovies } from '../topstore';
 	import MovieCard from '../components/MovieCard.svelte';
-
-	let searchTerm = '';
-	let filteredMovies = [];
-
-	$: {
-		if (searchTerm) {
-			filteredMovies = $movies.filter((movie) =>
-				movie.title.toLowerCase().includes(searchTerm.toLowerCase())
-			);
-		} else {
-			filteredMovies = [...$movies];
-		}
-	}
-
-	fetchMovies();
+	
+	fetchTopMovies()
 </script>
 
 <svelte:head>
@@ -23,14 +10,9 @@
 </svelte:head>
 
 	<h1 class="text-2xl text-center my-8">Najlepiej oceniane</h1>
-	<input
-		class="w-full rounded-md text-lg p-4 border-2 border-gray-400"
-		bind:value={searchTerm}
-		placeholder="Szukaj filmu"
-	/>
 	<div class="py-4 grid gap-4 lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
-		{#if filteredMovies.length > 0}
-			{#each filteredMovies as movie}
+		{#if $topMovies}		
+			{#each $topMovies as movie}
 				<MovieCard {movie} />
 			{/each}
 		{:else}

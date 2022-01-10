@@ -10,7 +10,6 @@ const upcomingMoviesDetails = {};
 
 export let loaded = false;
 
-export let loggedIn = false;
 
 
 export const fetchMovies = async () => {
@@ -74,7 +73,7 @@ export const fetchUpgomingMovies = async () => {
 	const loadedUpcomingMovies = data.results.map((data) => ({
 		title: data.title,
 		id: data.id,
-		poster_path: `https://www.themoviedb.org/t/p/w220_and_h330_face/${data.poster_path}`,
+		poster_path: data.poster_path,
 		vote_average: data.vote_average,
 		overview: data.overview,
 		release_date: data.release_date,

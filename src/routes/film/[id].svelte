@@ -1,6 +1,7 @@
 <script context="module">
     import { getMovieById } from "../../moviestore";
     import MovieCard from "../../components/MovieCard.svelte";
+    import SingleMovie from "../../components/SingleMovie.svelte";
     
     export async function load({params}) {
         console.log(params)
@@ -16,7 +17,9 @@
 <svelte:head>
 	<title>FilmyWSB - {movie.name}</title>
 </svelte:head>
-
+<!-- 
 <div class="flex flex-col items-center">
     <MovieCard movie={movie} />
-</div>
+</div> -->
+
+<SingleMovie {movie} />
