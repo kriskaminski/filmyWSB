@@ -1,14 +1,10 @@
 <script>
 	import { onMount } from 'svelte';
-
-	// const { snapshot, attachments, onSubmit, onPause } = Services.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQ1EvajJFWDdxU1NZWWNTaXczQ0xsSjUrdDFPZGNaM2VyN2llRmNpMllWRT0iLCJkZWZpbml0aW9uIjoiMmpiQ1BJY3BOcGh3S21oNlFqb21yT1FKcElheEpuTW9SbFZpS2RDUGFRRT0iLCJ0eXBlIjoiY29sbGVjdCJ9.Fx5pG_t38FvWEazcyofhBAqpTY7i6pCMWmyiZFbsVJM" });
-
+    
 	onMount(async () => {
 		const { run } = await import('tripetto-runner-autoscroll');
-		const { Export } = await import('tripetto-runner-foundation');
 		const { default: Services } = await import('tripetto-services');
-		console.log(Services.init);
-		const { snapshot, attachments, onSubmit, onPause } = Services.init({
+		const { attachments, onSubmit } = Services.init({
 			token:
 				'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQ1EvajJFWDdxU1NZWWNTaXczQ0xsSjUrdDFPZGNaM2VyN2llRmNpMllWRT0iLCJkZWZpbml0aW9uIjoiMmpiQ1BJY3BOcGh3S21oNlFqb21yT1FKcElheEpuTW9SbFZpS2RDUGFRRT0iLCJ0eXBlIjoiY29sbGVjdCJ9.Fx5pG_t38FvWEazcyofhBAqpTY7i6pCMWmyiZFbsVJM'
 		});

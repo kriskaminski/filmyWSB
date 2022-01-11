@@ -30,11 +30,11 @@
 
 <h1 class="text-2xl text-center my-8">Wyszukiwarka filmów</h1>
 <div class="form-control">
-    <label class="label">
+    <label class="label" for="search">
       <span class="label-text">Szukaj filmów:</span>
     </label> 
     <div class="">
-      <input type="text" bind:value={searchTerm} placeholder="tytuł, nazwisko, wytwórnia etc..." class="w-full input input-primary input-bordered mb-2"> 
+      <input id="search" type="text" bind:value={searchTerm} placeholder="tytuł, nazwisko, wytwórnia etc..." class="w-full input input-primary input-bordered mb-2"> 
       <button on:click={handleSearch} class="btn btn-primary w-full">Szukaj</button>
     </div>
   </div>
