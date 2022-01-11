@@ -29,8 +29,8 @@
 	placeholder="Szukaj filmu"
 />
 <div class="py-4 grid gap-4 lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
-	{#if !loaded}		
-	<button class="btn btn-accent loading col-span-4">Wczytuję filmy...</button> 
+	{#if !loaded}
+		<button class="btn btn-accent loading col-span-4">Wczytuję filmy...</button>
 	{:else if filteredMovies.length > 0}
 		{#each filteredMovies as movie}
 			<MovieCard {movie} />

@@ -1,5 +1,5 @@
 <script>
-	import { loaded, topMovies, fetchTopMovies } from '../topstore';
+	import { topMovies, fetchTopMovies } from '../topstore';
 	import MovieCard from '../components/MovieCard.svelte';
 
 	fetchTopMovies();

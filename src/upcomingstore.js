@@ -1,12 +1,11 @@
 import { writable } from 'svelte/store';
 
-const api_key = import.meta.env.VITE_TMDB_API_KEY
+const api_key = import.meta.env.VITE_TMDB_API_KEY;
 
 export const upcomingMovies = writable([]);
 const upcomingMoviesDetails = {};
 
 export let loaded = false;
-
 
 export const fetchUpgomingMovies = async () => {
 	if (loaded) return;
