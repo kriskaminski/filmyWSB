@@ -9,7 +9,7 @@
 	<title>FilmyWSB - Premiery</title>
 </svelte:head>
 
-<h1 class="text-2xl text-center my-8">Premiery</h1>
+<h1 class="text-4xl text-center my-8">Premiery</h1>
 <div class="py-4 grid gap-4 lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
 	{#if $upcomingMovies}
 		{#each $upcomingMovies as movie}

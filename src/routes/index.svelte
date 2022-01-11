@@ -26,7 +26,7 @@
 <input
 	class="w-full rounded-md text-lg p-4 border-2 border-gray-400"
 	bind:value={searchTerm}
-	placeholder="Szukaj filmu"
+	placeholder="Szukaj na tej stronie"
 />
 <div class="py-4 grid gap-4 lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
 	{#if !loaded}

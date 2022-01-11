@@ -29,7 +29,7 @@
 	<title>FilmyWSB - Szukaj</title>
 </svelte:head>
 
-<h1 class="text-2xl text-center my-8">Wyszukiwarka filmów</h1>
+<h1 class="text-4xl text-center my-8">Wyszukiwarka filmów</h1>
 <div class="form-control">
 	<label class="label" for="search">
 		<span class="label-text">Szukaj filmów:</span>
