@@ -3,16 +3,9 @@
 
 	onMount(async () => {
 		const { run } = await import('tripetto-runner-autoscroll');
-		const { default: Services } = await import('tripetto-services');
-		const { attachments, onSubmit } = Services.init({
-			token:
-				'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQ1EvajJFWDdxU1NZWWNTaXczQ0xsSjUrdDFPZGNaM2VyN2llRmNpMllWRT0iLCJkZWZpbml0aW9uIjoiYWFsVWJlV0ZMNWVscG40cmorbTQvaGJVZ2pLYmI1WnJ1MEh1SHNDMTlITT0iLCJ0eXBlIjoiY29sbGVjdCJ9.lFdGHkc8AKc43Iw4XDccR4WrM96rlDFcGDrGpl7ytBc'
-		});
-
 		run({
 			element: document.getElementById('tripetto') /* Or supply your own element here */,
 			definition: {
-				name: 'Quiz filmowy',
 				epilogue: {
 					title: 'Dziękujemy za wspólną zabawę 😀',
 					repeatable: true,
@@ -758,14 +751,13 @@
 					]
 				}
 			},
-			attachments,
-			onSubmit
+			// attachments,
+			onSubmit: () => {
+				console.log('Formularz zapisany');
+			}
 		});
 	});
 </script>
-<svelte:head>
-	<title>FilmyWSB - Quiz filmowy</title>
-</svelte:head>
 
 <div id="tripetto" class="h-3/4" />
 
